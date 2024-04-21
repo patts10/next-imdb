@@ -28,7 +28,7 @@ export const Card = ({ movie }: CardProps) => {
           <p>
             {movie.release_date || movie.first_air_date}
             <FiThumbsUp className='h-5 mr-1 ml-3' />
-            {movie.vote_average}
+            {movie.vote_count}
           </p>
         </div>
       </Link>
