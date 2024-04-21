@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { MovieInterface } from "../interfaces"
+import { Card } from "./Card"
 
 interface MoviesProps {
   movies: MovieInterface[]
@@ -7,13 +8,10 @@ interface MoviesProps {
 
 export const Movies:FC<MoviesProps> = ({movies}) => {
   return (
-    <div>
+    <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4">
       {
         movies.map((movie) => (
-          <div key={movie.id}>
-            <h2>{movie.original_title}</h2>
-            <p>{movie.overview}</p>
-          </div>
+          <Card key={movie.id} movie={movie} />
         ))
       }
     </div>
