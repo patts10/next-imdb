@@ -21,7 +21,7 @@ export default async function Movie({ params }: MovieProps) {
           src={`https://image.tmdb.org/t/p/original/${
             movie.backdrop_path || movie.poster_path
           }`}
-          alt={movie.title}
+          alt={movie.title || ''}
           width={500}
           height={300}
           className='rounded-lg'

@@ -15,7 +15,7 @@ export const Card = ({ movie }: CardProps) => {
           src={`https://image.tmdb.org/t/p/original/${
             movie.backdrop_path || movie.poster_path
           }`}
-          alt={movie.title}
+          alt={movie.title || ''}
           width={500}
           height={300}
           className='sm:rounded-lg group-hover:opacity-75 transition-opacity duration-300'
