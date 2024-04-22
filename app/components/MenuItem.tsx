@@ -4,7 +4,7 @@ import Link from 'next/link'
 interface MenuItemProps {
   title: string
   address: string
-  Icon: FC
+  Icon: any
 }
 
 export const MenuItem:FC<MenuItemProps> = ({ title, address, Icon }) => {
